@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Skywalker.UserInterface.EyeGazeInputGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Viewbox>
+            <Image Name="Background" Source="Resources/colors_bg.jpg"></Image>
+        </Viewbox>
+        <Grid Opacity="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!-- Row 1 -->
+            <Button Grid.Row="0" Grid.Column="0" Name="UpLeftButton" MouseEnter="button_enter" MouseLeave="button_exit" Style="{StaticResource MyButtonStyle}">UpLeft</Button>
+            <Button Grid.Row="0" Grid.Column="1" Name="UpButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">Up</Button>
+            <Button Grid.Row="0" Grid.Column="2" Name="UpRightButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">UpRight</Button>
+            <!-- Row 2 -->
+<!--            <Button Grid.Row="1" Grid.Column="0" Name="LeftButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10" FontSize="30" Background="Transparent">Left</Button> -->
+            <Button Grid.Row="1" Grid.Column="0" Name="LeftButton" MouseEnter="button_enter" MouseLeave="button_exit">Left</Button>
+
+            <Button Grid.Row="1" Grid.Column="1" Name="StopButton" Click="Stop_Clicked" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">Stop</Button>
+            <Button Grid.Row="1" Grid.Column="2" Name="RightButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">Right</Button>
+            <!-- Row 3 -->
+            <Button Grid.Row="2" Grid.Column="0" Name="BackLeftButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">BackLeft</Button>
+            <Button Grid.Row="2" Grid.Column="1" Name="BackButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">Back</Button>
+            <Button Grid.Row="2" Grid.Column="2" Name="BackRightButton" MouseEnter="button_enter" MouseLeave="button_exit" Margin="10,10,10,10">BackRight</Button>
+
+
+        </Grid>
+    </Grid>
+</UserControl>

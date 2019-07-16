@@ -1,0 +1,3 @@
+Packetizer KEYWORD1
+get KEYWORD2
+send KEYWORD2

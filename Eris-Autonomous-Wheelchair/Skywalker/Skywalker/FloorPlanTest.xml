@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FloorPlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>C:\Users\Dana\Pictures\KLivingTest2.PNG</Name>
+  <Room Name="RA_41Root">
+    <TopLeftCorner_U>40.5</TopLeftCorner_U>
+    <TopLeftCorner_V>49.984126984126988</TopLeftCorner_V>
+    <TopRightCorner_U>777.5</TopRightCorner_U>
+    <TopRightCorner_V>49.984126984126988</TopRightCorner_V>
+    <BottomLeftCorner_U>40.5</BottomLeftCorner_U>
+    <BottomLeftCorner_V>722.984126984127</BottomLeftCorner_V>
+    <BottomRightCorner_U>777.5</BottomRightCorner_U>
+    <BottomRightCorner_V>722.984126984127</BottomRightCorner_V>
+    <Number_Width_GridPoints>32</Number_Width_GridPoints>
+    <Number_Length_GridPoints>29</Number_Length_GridPoints>
+    <Root_IPS_U>777.5</Root_IPS_U>
+    <Root_IPS_V>722.984126984127</Root_IPS_V>
+    <Width_CM>961</Width_CM>
+    <Length_CM>896</Length_CM>
+    <U_Width>737</U_Width>
+    <V_Length>673</V_Length>
+  </Room>
+</FloorPlan>

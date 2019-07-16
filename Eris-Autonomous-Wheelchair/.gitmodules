@@ -1,0 +1,3 @@
+[submodule "MappingTool/MapTool"]
+	path = MappingTool/MapTool
+	url = https://github.eecs.wsu.edu/kjohnson/MapTool.git

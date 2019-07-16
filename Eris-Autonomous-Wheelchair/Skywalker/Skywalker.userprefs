@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Skywalker_TEST/Skywalker_TEST.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Skywalker/Mapping/MapRoom.cs">
+    <Files>
+      <File FileName="Skywalker/Mapping/MapSearch.cs" Line="5" Column="11" />
+      <File FileName="Skywalker/Mapping/MapRoom.cs" Line="6" Column="28" />
+      <File FileName="Skywalker/Mapping/MapPoint.cs" Line="4" Column="28" />
+      <File FileName="Skywalker/Mapping/MapEdge.cs" Line="5" Column="28" />
+      <File FileName="Skywalker/Mapping/Map.cs" Line="7" Column="28" />
+      <File FileName="Skywalker/Mapping/ICartographer.cs" Line="5" Column="28" />
+      <File FileName="Skywalker/Mapping/Cartographer.cs" Line="29" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

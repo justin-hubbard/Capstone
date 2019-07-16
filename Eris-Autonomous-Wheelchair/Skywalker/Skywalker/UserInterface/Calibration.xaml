@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Skywalker.UserInterface.Calibration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Skywalker.UserInterface"
+             mc:Ignorable="d" 
+             d:DesignHeight="760" d:DesignWidth="1400">
+    <Grid Background="#FF45B5C7">
+        <Button Content="Run Test" Click="Run_Test_Click" Margin="66,61,62,566" />
+        <Grid HorizontalAlignment="Left" Height="470" Margin="66,237,0,0" VerticalAlignment="Top" Width="1272">
+            <Label Content="Before Test" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="563"/>
+            <TextBox Name="BeforeTest" HorizontalAlignment="Left" Height="39" Margin="10,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131"/>
+            <Label Content="After Test" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="563"/>
+            <TextBox Name="AfterTest" HorizontalAlignment="Left" Height="39" Margin="10,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131"/>
+            <Label Content="Change in Degree" HorizontalAlignment="Left" Margin="213,45,0,0" VerticalAlignment="Top" Width="563"/>
+            <TextBox Name="DegreeChange" HorizontalAlignment="Left" Height="39" Margin="213,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131"/>
+            <Label Content="OffsetValue" HorizontalAlignment="Left" Margin="213,135,0,0" VerticalAlignment="Top" Width="563"/>
+            <TextBox Name="OffetValue" HorizontalAlignment="Left" Height="39" Margin="213,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

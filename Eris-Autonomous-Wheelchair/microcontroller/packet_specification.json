@@ -1,0 +1,5 @@
+{signal: [
+  {name: 'general form', wave: 'x.3..4..5...3..|x', data: ['Control Byte', 'Packet Size', 'Sensor Descriptor', 'Data']},
+  {name: 'orientation packet', wave: 'x.3.4.5.333333333333x', data: ['0x0A', '0x0D', '0x00', 'X3', 'X2', 'X1', 'X0', 'Y3', 'Y2', 'Y1', 'Y0', 'Z3', 'Z2', 'Z1', 'Z0']},
+  {name: 'sonar packet', wave: 'x.3.4.5.3.3.3.3.3.x', data: ['0x0A', '0x06', '0x01', 'Sonar ID', 'Byte 3', 'Byte 2', 'Byte 1', 'Byte 0']}],
+}

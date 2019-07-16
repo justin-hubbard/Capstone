@@ -1,0 +1,11 @@
+﻿<Window x:Class="Skywalker.UserInterface.MockVehicleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MockVehicleWindow" Height="326.866" Width="307.462" ResizeMode="NoResize">
+    <Grid>
+        <Canvas x:Name="Canvas" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300">
+            <TextBlock Canvas.Left="31" TextWrapping="Wrap" Text="Move in the direction indicated by the red arrow. The outer circle represents full speed and the inner circle represents half speed." Canvas.Top="241" Height="49" Width="239"/>
+        </Canvas>
+
+    </Grid>
+</Window>

@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="Skywalker.UserInterface.VisualInputGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            
+        <SolidColorBrush x:Key="defaultBorderColor" Color="DeepSkyBlue" Opacity="0.25"></SolidColorBrush>
+        <SolidColorBrush x:Key="defaultTextColor" Color="DeepSkyBlue" Opacity="0.5"></SolidColorBrush>
+        <SolidColorBrush x:Key="hoverBorderColor" Color="DarkCyan" Opacity="0.5"></SolidColorBrush>
+        <SolidColorBrush x:Key="hoverTextColor" Color="DarkCyan" Opacity="0.5"></SolidColorBrush>
+        <SolidColorBrush x:Key="selectedBorderColor" Color="Red" Opacity="0.75"></SolidColorBrush>
+        <SolidColorBrush x:Key="selectedTextColor" Color="Red" Opacity="0.5"></SolidColorBrush>
+        
+        <!-- This style is used for buttons, to remove the WPF default 'animated' mouse over effect -->
+        <Style TargetType="Button" x:Key="Basic" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderThickness" Value="5"></Setter>
+            <Setter Property="Margin" Value="10,10,10,10"></Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="Foreground" Value="{StaticResource defaultTextColor}"></Setter>
+            <Setter Property="BorderBrush" Value="{StaticResource defaultBorderColor}"></Setter>
+            
+        </Style>
+
+            <Style TargetType="Button" x:Key="SelectedButtonStyle" BasedOn="{StaticResource Basic}">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Name="border" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource selectedBorderColor}" />
+                                    <Setter Property="Foreground" Value="{StaticResource selectedTextColor}"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="Button" x:Key="DefaultButtonStyle" BasedOn="{StaticResource Basic}">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Name="border" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource hoverBorderColor}" />
+                                    <Setter Property="Foreground" Value="{StaticResource hoverTextColor}"></Setter>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <Style TargetType="Button" BasedOn="{StaticResource Basic}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource hoverBorderColor}" />
+                                <Setter Property="Foreground" Value="{StaticResource hoverTextColor}"></Setter>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="InputGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row 1 -->
+        <Button Grid.Row="0" Grid.Column="0" Name="UpLeftButton" MouseEnter="button_enter" MouseLeave="button_exit">UpLeft</Button>
+        <Button Grid.Row="0" Grid.Column="1" Name="UpButton" MouseEnter="button_enter" MouseLeave="button_exit">Up</Button>
+        <Button Grid.Row="0" Grid.Column="2" Name="UpRightButton" MouseEnter="button_enter" MouseLeave="button_exit">UpRight</Button>
+        <!-- Row 2 -->
+        <Button Grid.Row="1" Grid.Column="0" Name="LeftButton" MouseEnter="button_enter" MouseLeave="button_exit">Left</Button>
+        <Button Grid.Row="1" Grid.Column="1" Name="StopButton" Click="Stop_Clicked" MouseEnter="button_enter" MouseLeave="button_exit">Stop</Button>
+        <Button Grid.Row="1" Grid.Column="2" Name="RightButton" MouseEnter="button_enter" MouseLeave="button_exit">Right</Button>
+        <!-- Row 3 -->
+        <Button Grid.Row="2" Grid.Column="0" Name="BackLeftButton" MouseEnter="button_enter" MouseLeave="button_exit">BackLeft</Button>
+        <Button Grid.Row="2" Grid.Column="1" Name="BackButton" MouseEnter="button_enter" MouseLeave="button_exit">Back</Button>
+        <Button Grid.Row="2" Grid.Column="2" Name="BackRightButton" MouseEnter="button_enter" MouseLeave="button_exit">BackRight</Button>
+    </Grid>
+</UserControl>
